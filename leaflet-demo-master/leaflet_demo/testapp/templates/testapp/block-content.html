@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {% if title %}
+    <title>Django Demo - {{ title }} </title>
+    {% else %}
+    <title> Django About</title>
+    {% endif %}
+</head>
+<body>
+{% block content%}
+{% endblock%}
+
+{% for post in posts%}
+<h1>{{ post.title }}</h1>
+{% endfor %}
+
+</body>
+</html>
