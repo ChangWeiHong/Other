@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Survey Form</title>
+	<link rel="stylesheet" href="style-sheet.css">
+	<script type="text/javascript" src="script-sheet.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">My Survey Form</h1>
+    <p id="description" class="description text-center">
+      Appreciate for your time to filled in this form
+    </p>
+  </header>
+  <form id="survey-form">
+      <div class="form-group">
+      <label id="name-label" for="first-name">First Name<span class="clue">*</span></label>
+      <input
+        type="text"
+        name="first-name"
+        id="first-name"
+        class="form-control"
+        placeholder="Enter your first name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="name-label" for="last-name">Last name<span class="clue">*</span></label>
+      <input
+        type="text"
+        name="last-name"
+        id="last-name"
+        class="form-control"
+        placeholder="Enter your last-name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="email-label" for="email">Email<span class="clue">*</span></label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your Email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="number-label" for="number"
+        >Contact Number<span class="clue">(optional)</span></label
+      >
+      <input
+        type="number"
+        name="contact-number"
+        id="number"
+        min="10"
+        max="99"
+        class="form-control"
+        placeholder="Contact Number"
+      />
+    </div>
+    <div class="form-group">
+      <p>What is your lucky number?</p>
+      <select id="dropdown" name="lucky-number" class="form-control">
+        <option disabled selected value>Select your lucky number</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>Is this survey form impressive?</p>
+      <label>
+        <input
+          name="survey-form-impression"
+          value="yes"
+          type="radio"
+          class="input-radio"
+          checked
+        />Yes</label
+      >
+      <label
+        ><input
+          name="survey-form-impression"
+          value="no"
+          type="radio"
+          class="input-radio"
+        />No</label
+      >
+    </div>
+
+    <div class="form-group">
+      <p>
+        What would you like to see this form improved?
+        <span class="clue">(Check all that apply)</span>
+      </p>
+
+      <label
+        ><input
+          name="prefer"
+          value="theme"
+          type="checkbox"
+          class="input-checkbox"
+        />Theme</label
+      >
+      <label>
+        <input
+          name="prefer"
+          value="colour"
+          type="checkbox"
+          class="input-checkbox"
+        />Colour</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="parameter"
+          type="checkbox"
+          class="input-checkbox"
+        />Parameter</label>
+    </div>
+
+    <div class="form-group">
+      <p>Any feedbacks?</p>
+      <textarea
+        id="feedback"
+        class="input-textarea"
+        name="feedback"
+        placeholder="Enter your feedbacks here..."
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="submit" class="button button1">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+
+
+</body>
+</html>
