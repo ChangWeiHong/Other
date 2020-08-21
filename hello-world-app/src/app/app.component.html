@@ -1,0 +1,45 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user1 of user">
+            <td>{{user1.email}}</td>
+            <td>{{user1.first_name}}</td>
+            <td>{{user1.last_name}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Single User Table</th>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{userSingle.email}}</td>
+            <td>{{userSingle.first_name}}</td>
+            <td>{{userSingle.last_name}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Create User</h1>
+<form>
+    <input placeholder="Enter email" [(ngModel)]="user.email"/>
+    <input placeholder="Enter First Name"[(ngModel)]="user.first_name">
+    <input placeholder="Enter Last Name" [(ngModel)]="user.last_name"/>
+    <button type="submit" (click)="createUser()">Save</button>
+</form>
