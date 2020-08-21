@@ -15,13 +15,17 @@ export class AppComponent {
   
   user : User[];
   userSingle : User;
-  userForCreate: any = {};
+  userCreated: any = {
+      "name": "morpheus",
+      "job": "leader"
+  };
 
   constructor(public http: HttpClient, private apiService: ApicallService){}
 
   ngOnInit(){
     this.getUserList();
     this.getUserSingle();
+    this.createUser();
   }
 
   getUserList() {
@@ -43,9 +47,12 @@ export class AppComponent {
   }
 
   createUser(){
-    this.apiService.createUsers(this.userForCreate).subscribe((res)=>{
+    this.apiService
+    .createUser(this.userCreated)
+    .subscribe((res)=>{
+      console.log(res);
+      this.userCreated = res;
     });
   }
 
 }
-

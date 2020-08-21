@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './user';
+import { Userforcreate } from './userforcreate';
 import * as Rx from "rxjs/Rx";
 import { from, Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
@@ -34,8 +35,8 @@ export class ApicallService {
           )
       }
 
-      createUsers(user: User[]) {
-        return this.httpClient.post(`https://reqres.in/api/users`,user).
+      createUser(userforcreate: Userforcreate[]) {
+        return this.httpClient.post(`https://reqres.in/api/users`,userforcreate).
             pipe(
                map((data: any) => {
                  return data;

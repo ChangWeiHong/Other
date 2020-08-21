@@ -1,6 +1,10 @@
 <table class="table table-striped">
     <thead>
         <tr>
+            <th>List User Table</th>
+        </tr>
+        <tr>
+            <th>Id</th>
             <th>Email</th>
             <th>First Name</th>
             <th>Last Name</th>
@@ -8,6 +12,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let user1 of user">
+            <td>{{user1.id}}</td>
             <td>{{user1.email}}</td>
             <td>{{user1.first_name}}</td>
             <td>{{user1.last_name}}</td>
@@ -22,6 +27,7 @@
             <th>Single User Table</th>
         </tr>
         <tr>
+            <th>Id</th>
             <th>Email</th>
             <th>First Name</th>
             <th>Last Name</th>
@@ -29,6 +35,7 @@
     </thead>
     <tbody>
         <tr>
+            <td>{{userSingle.id}}</td>
             <td>{{userSingle.email}}</td>
             <td>{{userSingle.first_name}}</td>
             <td>{{userSingle.last_name}}</td>
@@ -36,10 +43,26 @@
     </tbody>
 </table>
 
-<h1>Create User</h1>
-<form>
-    <input placeholder="Enter email" [(ngModel)]="user.email"/>
-    <input placeholder="Enter First Name"[(ngModel)]="user.first_name">
-    <input placeholder="Enter Last Name" [(ngModel)]="user.last_name"/>
-    <button type="submit" (click)="createUser()">Save</button>
-</form>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Create User Table</th>
+        </tr>
+        <tr>
+            <th>id</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>createdAt</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{userCreated.id}}</td>
+            <td>{{userCreated.email}}</td>
+            <td>{{userCreated.name}}</td>
+            <td>{{userCreated.job}}</td>
+            <td>{{userCreated.createdAt}}</td>
+        </tr>
+    </tbody>
+</table>
