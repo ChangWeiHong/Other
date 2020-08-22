@@ -1,14 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import data from '../data.js';
+import {Link} from 'react-router-dom';
 
 function ProductScreen(props){
-    console.log(props.match.params.id);
-    const product = data.products.find(x => x.id === props.match.params.id);
-    return(
+    const product = data.products.find(x => x.id === props.match.params.id)
+    return (
     
     <div>
-        ProductScreen
         <div>
             <Link to="/">Back</Link>
         </div>
